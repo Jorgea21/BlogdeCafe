@@ -1,0 +1,297 @@
+:root{
+    --fuenteHeading: 'PT Sans', sans-serif;
+    --fuenteParrafos : 'Open Sans', sans-serif;
+
+    --primario: #784D3C;
+    --gris: #e1e1e1;
+    --blanco: #ffffff;
+    --negro: #000000; 
+
+}
+
+html{
+    box-sizing: border-box;
+    font-size: 62.5%;
+}
+
+*,*:before,*:after{
+    box-sizing: inherit;
+}
+
+.coffe{
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.cup{
+  
+  width: 22rem;
+  position: relative;
+  height: 18rem;
+  border: 0.8rem solid #ffefdb;
+  border-radius: 1rem 1rem 6rem 7.5rem;
+  box-shadow: 0 0 0 1.2rem #352a22;
+  background-image: url(../img/coffee.png);
+  background-repeat: repeat-x;
+  background-position: 0 13rem;
+  animation: filling 4s infinite;
+}
+
+@keyframes filling{
+  0%, 100%{
+    background-position: 0 13rem;
+  }
+  50%{
+    background-position: 60rem -7rem;
+  }
+}
+.cup .cup-handle{
+  position: absolute;  
+  top: 1rem;
+  right: -7.4rem;
+  width: 6.5rem;
+  height: 12rem;
+  border: 1.2rem solid #352a22;
+  border-radius: 2rem 1rem 5rem 2rem;
+
+   
+  
+}
+
+.cup .steam{
+  position: absolute;
+  border-radius: 1rem 0.2rem;
+  width: 0.8rem;
+  animation: rayas 2s infinite;
+}
+
+@keyframes rayas{
+  0%, 100%{
+    opacity: 0;
+  }
+  50%{
+    opacity: 1;
+    filter: blur(.8px);
+    transform: translateY(-1rem);
+  }
+}
+
+.cup .steam:nth-child(1){
+  top: -7rem;
+  left: 6.5rem;
+  height: 3rem;
+  background: #8e5a3423;
+  animation-delay: .2s;
+
+}
+.cup .steam:nth-child(2){
+  top: -12rem;
+  left: 9.5rem;
+  height: 5rem;
+  background: #8e5a3454;
+  animation-delay: .6s;
+
+
+}
+.cup .steam:nth-child(3){
+  top: -9rem;
+  left: 12.5rem;
+  height: 4rem;
+  background: #8e5a3433;
+  animation-delay: 1s;
+}
+
+body{
+    font-family: var(--fuenteParrafos);
+    font-size: 1.6rem;
+    line-height: 2;
+    
+}
+  
+/*Globales*/
+.contenedor{
+    max-width: 120rem;
+    width: 90%;
+    margin: 0 auto;
+}
+h1,h2,h3,h4,h5{
+    font-family: var(--fuenteHeading);
+
+}
+h1{
+    font-size: 4.8rem;
+}
+h2{
+    font-size: 4rem;
+}
+h3{
+    font-size: 3.2rem;
+}
+h4{
+    font-size: 2.8rem;
+}
+a{
+    text-decoration: none;
+}
+img{
+    max-width: 100%;
+}
+
+/*Utilidades*/
+.no-margin{
+    margin: 0;
+}
+.no-padding{
+    padding: 0;
+}
+.centrar-texto{
+    text-align: center;
+}
+
+/*Header*/
+
+.header{
+    background-image: url(../img/banner.jpg);
+    height: 60rem;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+}
+
+.header__texto{
+    color: var(--blanco);
+    text-align: center;
+    margin-top: 5rem;
+    
+}
+
+@media (min-width:768px){
+    .barra{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+}
+
+@media (min-width:768px){
+    .header__texto{
+        margin-top: 15rem;
+    }
+}
+
+
+.logo{
+    color: var(--blanco);
+}
+
+.logo__nombre{
+    font-weight: 400;
+}
+
+.logo__bold{
+    font-weight: 700;
+}
+
+@media (min-width:768px){
+    .navegacion{
+        display: flex;
+        gap : 2rem; 
+    }
+}
+
+.navegacion__enlace{
+    display: block;
+    text-align: center;
+    font-size: 1.8rem;
+    color: var(--blanco);
+}
+
+@media (min-width:768px){
+    .contenido-principal{
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+        gap: 4rem;
+    }
+}
+
+.entrada{
+    border-bottom: 0.3rem solid var(--gris);
+    margin-bottom: 2rem;
+    
+}
+.entrada:last-of-type{
+    border-bottom: none;
+    margin-bottom: 0;
+}
+
+/*Boton*/
+
+.boton{
+    display:block;
+    font-family: var(--fuenteHeading);
+    color: var(--blanco);
+    padding: 1rem 3rem;
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 1.8rem;
+    margin-bottom: 2rem;
+    border: none;
+
+}
+@media (min-width:768px){
+    .boton{
+        display: inline-block;
+    }
+    
+}
+
+.boton--primario{
+    background-color: var(--negro);
+}
+.boton--secundario{
+  background-color: var(--primario);
+}
+
+/*Barra Lateral*/
+
+.cursos{
+  list-style: none;
+}
+
+.widget-curso{
+    border-bottom: 0.3rem solid var(--gris);
+    margin-bottom: 2rem;
+}
+
+.widget-curso:last-of-type{
+  border: none;
+  margin-bottom: 0;
+}
+
+
+
+.widget-curso__label{
+  font-family: var(--fuenteHeading);
+  font-weight: bold;
+}
+
+.widget-curso__bold{
+  font-weight: 400;
+}
+
+.widget-curso__labe,
+.widget-curso__bold{
+  font-size: 2rem
+}
+
+.footer{
+  background-color: var(--negro);
+  padding-bottom: 3rem;
+  margin-top: 4rem;
+
+}
+
+

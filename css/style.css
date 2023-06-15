@@ -337,6 +337,23 @@ img{
   padding: 5rem;
   
 }
+
+.error{
+  background-color: red;
+  text-align: center;
+  color: var(--blanco);
+  padding: 1rem;
+  text-transform: uppercase;
+
+}
+
+.mensaje-enviado{
+  background-color: green;
+  text-align: center;
+  color: var(--blanco);
+  padding: 1rem;
+  text-transform: uppercase;
+}
 .campo{
   display: flex;
   margin-bottom: 2rem;
